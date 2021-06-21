@@ -20,7 +20,9 @@ def view():
 def count():
     y=str(db.tododb.find().count())
     return y
-
+@app.route("/summa")
+def summa():
+    return "ada dai"
 @app.route("/find/<id>")
 def find(id):
     x=list(db.tododb.find({"_id":id}))
